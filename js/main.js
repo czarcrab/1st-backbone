@@ -13,6 +13,8 @@ var AppRouter = Backbone.Router.extend({
         $('#header').html(this.headerView.el);
         this.footerView = new FooterView();
         $('#footer').html(this.footerView.el);
+        this.sidebarView = new SidebarView();
+        $('#sidebar').html(this.sidebarView.el);
     },
 
     list: function(page) {
@@ -61,7 +63,7 @@ var AppRouter = Backbone.Router.extend({
 
 });
 
-utils.loadTemplate(['HeaderView', 'WineView', 'WineListItemView', 'AboutView', 'FooterView'], function() {
+utils.loadTemplate(['HeaderView', 'WineView', 'WineListItemView', 'AboutView', 'FooterView', 'SidebarView'], function() {
     app = new AppRouter();
     Backbone.history.start();
 });

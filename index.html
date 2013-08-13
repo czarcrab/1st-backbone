@@ -13,29 +13,38 @@
     <link href="lib/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="lib/css/docs.css" rel="stylesheet">
     <link href="css/sticky-header-footer-navbar.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
-    <!-- Wrap all page content here -->
+    <!-- Wrap all page content here to push down footer -->
     <div id="wrap">
         <!-- Fixed navbar -->
-        <div id="header" class="navbar-inverse"></div>
-
-        <!-- Begin page content -->
-        <div class="container">
-            <div class="page-header">
-                <h1>Sticky footer with fixed navbar</h1>
+        <div id="header"></div>
+        <div class="bs-header">
+            <div class="container">
+                <h1>CSS</h1>
+                <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
             </div>
-            <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added within
-                <code>#wrap</code>with
-                <code>padding-top: 60px;</code>on the
-                <code>.container</code>.</p>
-            <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+        </div>
+
+        <!-- For full page content -->
+        <div id="full-page" class="container page-header" style="display:none">
+            <h1>Full page header here</h1>
+        </div>
+        <!-- For page with left navbar -->
+        <div class="container bs-docs-container">
+            <div id="left-nav-page" class="row">
+                <div id="sidebar" class="col-lg-3"></div>
+                <div id="main" class="page-header col-lg-9">
+                <h1>Overview</h1>
+                </div>
+            </div>
         </div>
     </div>
-
+    <!-- Footer -->
     <div id="footer" class="navbar-inverse"></div>
 
     <!-- Bootstrap core JavaScript
@@ -47,6 +56,7 @@
     <script src="js/utils.js"></script>
     <script src="js/views/header.js"></script>
     <script src="js/views/footer.js"></script>
+    <script src="js/views/sidebar.js"></script>
     <script src="js/main.js"></script>
 </body>
 
